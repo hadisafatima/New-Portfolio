@@ -1,0 +1,203 @@
+// @mixin logoAnimation(){
+    @keyframes sizeReducerFromSM {
+        0%{
+            font-size: 30rem;
+        }100%{
+            font-size: 10rem;
+            // top: 17rem;
+            color: black;
+        }
+    }
+
+    @keyframes sizeReducer {
+        0%{
+            font-size: 30rem;
+        }100%{
+            font-size: 8rem;
+        }
+    }
+// }
+
+
+// @mixin zAnimation(){
+    @keyframes zRightFromSM {
+        0%{
+            margin-left: 0;
+        }100%{
+            margin-left: 11.5rem;
+        }
+    }
+// }
+
+@mixin initialPlacement(){
+    @keyframes initials {
+        0%{
+            top: 30%;
+            left: 0;
+        }100%{
+            top: -6%;
+            left: -33%;
+        }
+    }
+
+    @keyframes initialsFromSM {
+        0% {
+            top: 30%;
+            left: 0;
+        }
+        100% {
+            top: -4%;
+            left: -44vw;
+        }
+    }
+}
+
+@mixin animationController(){
+    animation-iteration-count: 2;
+    animation-timing-function: ease-in-out;
+}
+
+
+// @mixin headingTransitions(){
+    @keyframes headingTransit {
+        0%{
+            // height: 40rem;
+            padding: 18rem;
+            font-size: 6rem;
+            text-align: center;
+        }100%{
+            // height: 10rem;
+            padding: 1.25rem;
+            font-size: 2.25rem;
+            text-align: right;
+        }
+    }
+// }
+
+#logoBgShape{
+    @include animationController();
+}
+
+#logo{
+    // #initialParent{
+        #initial{
+            @include initialPlacement();
+            &.initialPlacementFromSM{
+                animation: initialsFromSM 1s ease-in-out forwards;
+            }
+
+            &.initialPlacement{
+               animation: initials 1s ease-in-out forwards;
+            }
+
+            section{
+                #H {
+                    &.logoRise{
+                        // @include logoAnimation(); 
+                        animation: riseAndPing 1s ease-in-out forwards, sizeReducerFromSM 1s ease-in-out 1s forwards;
+                        // animation: name duration timing-function delay iteration-count direction fill-mode;
+                    }
+                } 
+            }
+        }
+    // }
+
+    #adzzZz{
+        &.zShift{
+            // @include zAnimation();
+            // animation: zLeft 0.5s ease-in forwards, zForward 1s ease-in-out 0.5s forwards;
+            animation: zRightFromSM 0.5s ease-in forwards;
+
+        }
+    }
+
+    // &.logoPlacement{
+    //     @include logoPlacement();
+    //     animation: logoAtTop 1.5s ease-in-out forwards;
+    // }
+} 
+
+@mixin contentVisible(){
+    @keyframes contentOpacity {
+        from{
+            opacity: 0;
+        }to{
+            opacity: 100;
+        }
+    }
+}
+
+@mixin movingEffect(){
+    @keyframes keepMoving {
+        0%, 100% {
+            transform: translate3d(0px, 0px, 0px);
+        }
+        50% {
+            // transform: translate(-5px, 5px);
+            transform: translate3d(5px, 5px, 5px);
+        }
+    }
+}
+
+#homeScreenParent{
+    &.contentVisibility{
+        @include contentVisible();
+        animation: contentOpacity 1s ease-in forwards;
+    }
+
+    #homeScreenContent{
+        section{
+            // @include 
+            // section{
+            #name{
+                p{
+                    @include animationController();
+                    &.moveEffect{
+                        @include movingEffect();
+                        animation: keepMoving 1.5s ease-in-out infinite;
+                    }
+                }
+            }
+
+            #myFields{
+                p{
+                    &.moveEffect{
+                        @include movingEffect();
+                        animation: keepMoving 1s ease-in-out infinite;
+                    }
+                }
+            }
+
+            #missionStatement{
+                section{
+                    p{
+                        @include movingEffect();
+                        animation: keepMoving 3s ease-in-out infinite;
+                        
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+#menu{
+    #menuTag{
+        @include animationController();
+    }
+}
+
+// .custom-abstract-shape {
+//   clip-path: path("M50,0 Q100,100 50,150 Q0,250 50,300 Q150,400 300,350 Q450,300 500,350 Q600,400 600,300 Q600,200 550,150 Q500,100 550,0 Z");
+// }
+
+
+#about{
+    #aboutHeading{
+        .aboutHeadingTransition{
+            // @include headingTransitions();
+            animation: headingTransit 1s ease-out 2s forwards;
+        }
+    }
+}
