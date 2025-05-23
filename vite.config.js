@@ -12,13 +12,15 @@ export default defineConfig({
   // this tells vite to not treat .html file as .js file by adding html assets
   assetsInclude: ['**/*.html'],
 
-  // these will help make a multi page site, bcuz by default it can only handle on .html file
+  // // these will help make a multi page site, bcuz by default it can only handle on .html file
   build: {
     rollupOptions: {
       input: {
         main: './index.html',
         about: './aboutHadzz.html',
-        // projects: './projects.html',
+        projects: './projects.html',
+        skills: './skills.html',
+        contact: './contact.html'
         // Add other HTML files here
       }
     }

@@ -3,72 +3,131 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/jpeg" href="./assets/Hadisa.jpeg"/>
+    <link rel="icon" type="image/jpeg" href="./assets/Hadisa.jpeg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/index.css">
     <link rel="stylesheet" href="src/main.scss">
     <title>HadzzZz Portfolio - About</title>
 </head>
 
-<body class="bg-blue-100">
+<body class="bg-blue-100 m-0 p-0">
 
+    <!-- navbar/menu -->
+    <section id="menu"
+        class="list-none fixed inline w-[9rem] z-10 space-y-1 text-gray-900 top-[29rem] text-center right-[1rem] sm:right-12 leading-8 font-medium text-md">
+        <!-- menu -->
+        <section id="menuList" class="bg-[#BFB1C1] hidden rounded-t-full px-5 pb-2 pt-1 font-bold">
+            <li class="hover:cursor-pointer hover:text-pink-600"><a href="./index.html">Home</a></li>
+            <li class="hover:cursor-pointer border-b-2 text-pink-600"><a href="./aboutHadzz.html">About
+                    Me</a></li>
+            <li class="hover:cursor-pointer hover:text-pink-600"><a href="./projects.html">Projects</a></li>
+            <li class="hover:cursor-pointer hover:text-pink-600"><a href="./skills.html">Skills</a></li>
+            <li class="hover:cursor-pointer hover:text-pink-600"><a href="./contact.html">Contact</a></li>
+        </section>
+
+        <!-- menu icon -->
+        <section id="menuTag"
+            class="font-bold text-2xl sm:text-[1rem] bg-pink-400 p-4 sm:p-1 fixed right-6 sm:right-12 bottom-9 hover:bg-pink-500 hover:h-9 w-fit sm:w-[9.5rem] hover:margin-t-1 rounded-full text-center">
+            <section class="hover:text-pink-200 justify-around items-center cursor-pointer flex">
+                <span class="hidden sm:inline">Menu</span>
+                <i class="fa-solid fa-bars size-5 mt-0 sm:mt-1"></i>
+            </section>
+        </section>
+
+    </section>
+
+    <!-- about page content -->
     <section id="about" class="flex flex-col">
 
         <!-- firstly have to apply the heading transition, then swap the "justify-around" to "justify-between" -->
-        <section class="flex flex-row justify-around">
-            <img src="assets/logoBgBlob.png" alt="" class="w-24 hidden">
+        <!-- <section class="w-full flex flex-col justify-center"> -->
+        <section id="aboutHeadingParent" class="flex flex-row justify-center">
+            <img src="assets/logoBgBlob.png" alt="" class="hidden w-[6rem] sm:w-24">
 
             <!-- aboutHeadingTransition not working -->
-            <div id="aboutHeading" class="aboutHeadingTransition text-8xl text-center font-extrabold py-72">About
-                HadzzZz.
+            <div id="aboutHeading" class="text-[2rem] sm:text-8xl font-extrabold py-72">About
+                Hadisa.
             </div>
         </section>
+        <!-- </section> -->
 
-        <div id="aboutContent" class="bg-blue-300 text-2xl m-2 mt-0 py-10 px-12 rounded-lg flex flex-col text-balance space-y-3">
-            <p>This side <span class="underline">Hadisa Fatima Syed.</span> I'm a <span
-                    class="bg-pink-400 py-1 px-2 rounded-full font-mono">Passionate</span>
-                Front-end developer with <span class="bg-pink-400 py-1 px-2 rounded-full font-mono">leveraging
+        <div id="aboutContent"
+            class="bg-blue-300 moveEffect text-[1.2rem] sm:text-[1.8rem] mx-0 sm:m-2 sm:mb-0 mt-0 py-10 px-8 sm:px-24 rounded-t-[3rem] sm:rounded-t-lg flex flex-col space-y-6">
+            <p>This side <span class="">Hadisa Fatima Syed.</span> I'm a <span
+                    class="bg-yellow-100/50 py-1 px-2 rounded-full font-mono">Passionate</span>
+                Front-end developer with <span class="bg-yellow-200/50 py-1 px-2 rounded-full font-mono">leveraging
                     Enthusiasm</span>
                 for Data Analysis.</p>
-            <p>I'm a <span class="bg-pink-400 py-1 px-2 rounded-full font-mono">3rd Year</span> (6th Semester) Student
+            <p>I'm a <span class="bg-blue-400/60 py-1 px-2 rounded-full font-mono">3rd Year</span> (6th Semester)
+                Student
                 of Software Engineering Degree in Mehran University of Engineering
                 and Technology, Jamshoro (MUET, Jamshoro).</p>
             <p>started with UI developement back in 2nd Semester, and now I can <span
-                    class="bg-pink-400 py-1 px-2 rounded-full font-mono">confidently</span> and <span
-                    class="bg-pink-400 py-1 px-2 rounded-full font-mono">seamlessly</span> build almost
+                    class="bg-purple-100/50 py-1 px-2 rounded-full font-mono">confidently</span> and <span
+                    class="bg-purple-800/50 text-white py-1 px-2 rounded-full font-mono">seamlessly</span> build almost
                 any design. But, that didn't feel <span
-                    class="bg-pink-400 py-1 px-2 rounded-full font-mono">enough</span> to me so I explored a little and
+                    class="bg-purple-400/50 py-1 px-2 rounded-full font-mono">enough</span> to me so I explored a little
+                and
                 got my interests stuck in the
-                landscape of <span class="bg-pink-400 py-1 px-2 rounded-full font-mono">Data Analysis.</span> Now I try
+                landscape of <span class="bg-purple-600/40 py-1 px-2 rounded-full font-mono">Data Analysis</span>. Now I
+                try
                 to divide time to do both, but not combininig these fields <span
-                    class="bg-pink-400 py-1 px-2 rounded-full font-mono">YET.</span>
+                    class="bg-purple-400/50 py-1 px-2 rounded-full font-mono">YET</span>.
             </p>
-            <p>I've immensely <span class="bg-pink-400 py-1 px-2 rounded-full font-mono">growing interests</span>
+            <p>I've immensely <span class="bg-orange-400/80 py-1 px-2 rounded-full font-mono">growing interests</span>
                 towards using UI developement and Data Analysis' knowledge/Skills
-                Together <span class="bg-gray-600 py-1 px-2 rounded-full font-mono">🤝</span></p>
-            <p>I <span class="bg-red-500 py-1 px-2 rounded-full font-mono">love</span> going out of box, instead of
+                Together <span class="bg-orange-600 py-1 px-2 rounded-full font-mono">🤝</span></p>
+            <p>I <span class="bg-green-500/50 py-1 px-2 rounded-full font-mono">love</span> going out of box, instead of
                 building traditionally designed sites I embark on developing
-                something that's <span class="bg-black text-gray-300 py-1 px-2 rounded-full font-mono">new,</span> that's <span
-                    class="bg-black text-gray-300 py-1 px-2 rounded-full font-mono">attention seeker</span> 👀. </p>
+                something that's <span class="bg-black text-green-300 py-1 px-2 rounded-full font-mono">new</span>,
+                that's <span class="bg-black text-green-300 py-1 px-2 rounded-full font-mono">attention seeker</span>
+                👀. </p>
             <p>Speaking of Analyst side of mine 😌. I've explored a few datasets so far, a mighty one and others were
                 large enough
                 to teach something.</p>
             <p>I've been part of a <span class="bg-pink-400 py-1 px-2 rounded-full font-mono">virtual Job
-                    Simulation</span> for Data Analyst by Forage, it was an amazing explorience
-                indeed ✨. It taught me everything that an Analyst go through, <span
-                    class="bg-pink-400 py-1 px-2 rounded-full font-mono">from</span> Data Manipulation <span
-                    class="bg-pink-400 py-1 px-2 rounded-full font-mono">to</span> presentation,
-                for performing their jobs the wanted way.</p>
-            <p><span class="bg-pink-400 py-1 px-2 rounded-full font-mono">Fun Fact</span> 😶‍🌫️: When not found doing
+                    Simulation</span> for Data Analyst by <span
+                    class="bg-pink-400/90 py-1 px-2 rounded-full font-mono">Forage</span>, it was an amazing explorience
+                indeed ✨. It taught me everything that an Analyst go through, from <span
+                    class="bg-pink-400/70 py-1 px-2 rounded-full font-mono">Data Manipulation</span> to <span
+                    class="bg-pink-400/70 py-1 px-2 rounded-full font-mono">presentation </span>, for performing their
+                jobs
+                the wanted way.</p>
+
+            <!-- need to work on that -->
+            <p><span class="bg-yellow-400/60 py-1 px-2 rounded-full font-mono">Fun Fact 😶‍🌫️:</span> When not found
+                doing
                 UI dev or getting insights from data, am busy with playing <span
                     class="bg-orange-400 py-1 px-2 rounded-full font-mono">FreeFire</span>
                 🔥,<span class="bg-blue-400 py-1 px-2 rounded-full font-mono">Rope Jumping</span> ❤️‍🔥 or Scrolling
-                <span class="bg-purple-400 py-1 px-2 rounded-full font-mono">Instagram.</span></p>
+                <span class="bg-purple-400 py-1 px-2 rounded-full font-mono">Instagram.</span>
+            </p>
         </div>
+
+
     </section>
 
 </body>
+<script src="about.js"></script>
+<script src="menu.js"></script>
+
 <script src="index.html"></script>
+<script src="projects.html"></script>
+<script src="skills.html"></script>
+<script src="contact.html"></script>
+
 <script src="https://kit.fontawesome.com/334ac14b63.js" crossorigin="anonymous"></script>
 
 </html>
+
+
+<!-- <section id="aboutHeadingParent" class="w-full flex justify-center">
+                <img src="assets/logoBgBlob.png" alt="" class="opacity-0 w-24">
+    
+               
+                <div id="aboutHeading" class="text-6xl sm:text-8xl font-extrabold py-72">About
+                    HadzzZz.
+                </div>
+            </section>
+
+i want to set this tag's "aboutHeading" div to extreme right starting from center through a smooth transition, how can i do ? -->

@@ -59,19 +59,19 @@
 
 
 // @mixin headingTransitions(){
-    @keyframes headingTransit {
-        0%{
-            // height: 40rem;
-            padding: 18rem;
-            font-size: 6rem;
-            text-align: center;
-        }100%{
-            // height: 10rem;
-            padding: 1.25rem;
-            font-size: 2.25rem;
-            text-align: right;
-        }
-    }
+//     @keyframes headingTransit {
+//         0%{
+//             // height: 40rem;
+//             padding: 18rem;
+//             font-size: 6rem;
+//             text-align: center;
+//         }100%{
+//             // height: 10rem;
+//             padding: 1.25rem;
+//             font-size: 4rem;
+//             text-align: right;
+//         }
+//     }
 // }
 
 #logoBgShape{
@@ -163,7 +163,7 @@
                 p{
                     &.moveEffect{
                         @include movingEffect();
-                        animation: keepMoving 1s ease-in-out infinite;
+                        animation: keepMoving 1.5s ease-in-out infinite;
                     }
                 }
             }
@@ -188,16 +188,60 @@
     }
 }
 
-// .custom-abstract-shape {
-//   clip-path: path("M50,0 Q100,100 50,150 Q0,250 50,300 Q150,400 300,350 Q450,300 500,350 Q600,400 600,300 Q600,200 550,150 Q500,100 550,0 Z");
+// @mixin changeAboutHeadingParent(){
+//     @keyframes changeaboutheadingparent {
+//         from{
+//             // transform: translateX(0%);
+//         }to{
+//             // transform: translateX(33%);
+//         }
+//     }
 // }
 
+// @mixin changeAboutHeading(){
+    @keyframes changeheadingBfSM {
+        from{
+            // font-size: 2rem;
+            padding: 18rem 0;
+        }to{
+            // font-size: 1rem;
+            padding: 2rem 0.5rem 1rem 0;
+        }
+    }
+
+    @keyframes changeheading {
+        from{
+            font-size: 6rem;
+            padding: 18rem 0;
+        }to{
+            font-size: 4rem;
+            padding: 2rem 0.5rem 1rem 0;
+        }
+    }
+// }
 
 #about{
-    #aboutHeading{
-        .aboutHeadingTransition{
-            // @include headingTransitions();
-            animation: headingTransit 1s ease-out 2s forwards;
+    #aboutHeadingParent{
+        // &.headingParentChange{
+        //     @include changeAboutHeadingParent();
+        //     animation: changeaboutheadingparent 2s ease-in-out forwards;
+        // }
+        #aboutHeading{
+            // @include changeAboutHeading();
+            &.headingChange{
+                animation: changeheading 1s ease-in-out forwards ;
+            }
+            
+            &.headingChangeBfSM{
+                animation: changeheadingBfSM 1s ease-in-out forwards ;
+            }
+        }
+    }
+
+    #aboutContent{
+        p{
+            @include movingEffect();
+            animation: keepMoving 2s ease-in-out infinite;
         }
     }
 }
