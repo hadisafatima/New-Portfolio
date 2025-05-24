@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+// import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 
@@ -7,7 +7,7 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [
     tailwindcss(),
-    react()
+    // react()
   ],
   // this tells vite to not treat .html file as .js file by adding html assets
   assetsInclude: ['**/*.html'],
@@ -19,7 +19,7 @@ export default defineConfig({
         main: './index.html',
         about: './aboutHadzz.html',
         projects: './projects.html',
-        skills: './skills.html',
+        skills: './skillss.html',
         contact: './contact.html'
         // Add other HTML files here
       }
